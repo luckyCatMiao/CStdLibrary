@@ -2,6 +2,7 @@
 #include "mstring.h"
 #include <stdlib.h>
 #include "util.h"
+#include "array.h"
 
 struct _Student {
     String name;
@@ -32,21 +33,7 @@ int add(int a, int b) {
 }
 
 
-struct _Array{
-    int size;
-};
-typedef struct _Array *Array;
 
-Array newArray(int elementSize,int length){
-    int len= sizeof(struct _Array);
-    Array arr=malloc((size_t) len);
-    arr->size=length;
-
-    int memory=elementSize*length;
-
-
-    return arr;
-}
 
 
 int main() {
@@ -77,7 +64,11 @@ int main() {
 //    f(s);
 
 
-    Array array=newArray();
+    Array array=newArray(4,10);
+    println_d(array->size);
+    println_d(*((int*)array->get(array, 1)));
+
+    //println_d((int) calloc(10, 10));
 
     return 0;
 }

@@ -1,8 +1,15 @@
-//
-// Created by Administrator on 2/4/2018.
-//
-
-#ifndef INC_2018_2_3STRINGLIBRARY_ARRAY_H
-#define INC_2018_2_3STRINGLIBRARY_ARRAY_H
-
-#endif //INC_2018_2_3STRINGLIBRARY_ARRAY_H
+struct _Array{
+    int size;
+    void* _p;
+    int _elementSize;
+    void* (*get)(struct _Array*, int);
+    struct _Array* _self;
+};
+typedef struct _Array *Array;
+/**
+ * createa new Array
+ * @param elementSize
+ * @param length
+ * @return
+ */
+Array newArray(int elementSize,int length);
