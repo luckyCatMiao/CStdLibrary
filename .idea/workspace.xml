@@ -11,10 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90c330a0-18f8-4904-9d9e-1044cc728a1b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="90c330a0-18f8-4904-9d9e-1044cc728a1b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +28,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2369">
               <caret line="103" column="24" lean-forward="false" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-              <folding />
+              <folding>
+                <element signature="e#0#20#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,9 +50,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
               <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <marker date="1517746515318" expanded="true" signature="72:453" ph="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -161,12 +158,12 @@
       <option name="presentableId" value="Default" />
       <updated>1517742672589</updated>
       <workItem from="1517742674143" duration="3935000" />
-      <workItem from="1517746636731" duration="101000" />
+      <workItem from="1517746636731" duration="108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4036000" />
+    <option name="totallyTimeSpent" value="4043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
@@ -210,7 +207,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2369">
           <caret line="103" column="24" lean-forward="false" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#0#20#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -226,9 +225,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding>
-            <marker date="1517746515318" expanded="true" signature="72:453" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -317,7 +314,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2369">
           <caret line="103" column="24" lean-forward="false" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#0#20#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -325,9 +324,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <marker date="1517746515318" expanded="true" signature="72:453" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
