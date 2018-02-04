@@ -1,0 +1,8 @@
+//
+// Created by Administrator on 2/4/2018.
+//
+
+#ifndef INC_2018_2_3STRINGLIBRARY_ARRAY_H
+#define INC_2018_2_3STRINGLIBRARY_ARRAY_H
+
+#endif //INC_2018_2_3STRINGLIBRARY_ARRAY_H
