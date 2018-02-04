@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="2018_2_3StringLibrary"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2018_2_3StringLibrary">
+				<Option output="A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/2018_2_3StringLibrary.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/mingw/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include"/>
+					<Add directory="E:/mingw/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="E:/mingw/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 2018_2_3StringLibrary"/>
+					<CompileFile command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="2018_2_3StringLibrary/fast">
+				<Option output="A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/2018_2_3StringLibrary.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/mingw/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include"/>
+					<Add directory="E:/mingw/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/include-fixed"/>
+					<Add directory="E:/mingw/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.2.0/../../../../i686-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 2018_2_3StringLibrary/fast"/>
+					<CompileFile command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/mingw/mingw32/bin/mingw32-make.exe -f &quot;A:/c2c++/project/2018.2.3Stdlib/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/boolean.c">
+			<Option target="2018_2_3StringLibrary"/>
+		</Unit>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/boolean.h">
+			<Option target="2018_2_3StringLibrary"/>
+		</Unit>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/main.c">
+			<Option target="2018_2_3StringLibrary"/>
+		</Unit>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/mstring.c">
+			<Option target="2018_2_3StringLibrary"/>
+		</Unit>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/mstring.h">
+			<Option target="2018_2_3StringLibrary"/>
+		</Unit>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/util.c">
+			<Option target="2018_2_3StringLibrary"/>
+		</Unit>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/util.h">
+			<Option target="2018_2_3StringLibrary"/>
+		</Unit>
+		<Unit filename="A:/c2c++/project/2018.2.3Stdlib/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
