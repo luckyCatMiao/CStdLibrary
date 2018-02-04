@@ -115,3 +115,30 @@ String concat(String s1, String s2) {
     p[len1+len2]='\0';
     return p;
 }
+
+
+
+
+String toUpperCase(String s1) {
+    int len=length(s1);
+    for(int i=0;i<len;i++){
+        if(s1[i]>96&&s1[i]<123){
+            s1[i]-=32;
+        }
+    }
+
+    return s1;
+}
+
+
+
+String toDownCase(String s1) {
+    int len=length(s1);
+    for(int i=0;i<len;i++){
+        if(s1[i]>64&&s1[i]<91){
+            s1[i]+=32;
+        }
+    }
+
+    return s1;
+}

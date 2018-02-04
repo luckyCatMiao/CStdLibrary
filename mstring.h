@@ -12,3 +12,5 @@ boolean startWith(String s1, String s2);
 int indexOf( String src,  char ch);
 String subString(String src,int start,int end);
 String concat(String s1,String s2);
+String toUpperCase(String s1);
+String toDownCase(String s1);

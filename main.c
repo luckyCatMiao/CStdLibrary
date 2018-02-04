@@ -5,7 +5,7 @@
 
 
 int main() {
-    String str=newString("12345");
+    String str=newString("12345abc");
 //    println_s(str);
 //    println_d(length(str));
 //    println_d(isEmpty(str));
@@ -15,6 +15,8 @@ int main() {
 //    println_d(indexOf(str,'3'));
     println_s(subString(str,1,3));
     println_s(concat(str,newString("678")));
+    println_s(toUpperCase(str));
+    println_s(toDownCase(str));
 
     return 0;
 }
