@@ -1,6 +1,5 @@
 #include "mstring.h"
 #include <stdlib.h>
-#include "boolean.h"
 
 
 /**
@@ -9,22 +8,23 @@
  * @return
  */
 String newString(char *str) {
-    int len= length(str);
-    char* p=(char*)malloc((size_t)len+1);
-    for(int i=0;i<len;i++){
-        p[i]=str[i];
+    int len = length(str);
+    char *p = (char *) malloc((size_t) len + 1);
+    for (int i = 0; i < len; i++) {
+        p[i] = str[i];
     }
-    p[len]='\0';
+    p[len] = '\0';
     return p;
 }
+
 /**
  *
  * @param str
  * @return
  */
 int length(String str) {
-    char* s2= (char *) str;
-    while(*s2++!='\0');
+    char *s2 = (char *) str;
+    while (*s2++ != '\0');
     return (int) (s2 - str - 1);
 }
 
@@ -34,28 +34,27 @@ int length(String str) {
  * @return
  */
 boolean isEmpty(String str) {
-    return length(str)==0;
+    return length(str) == 0;
 }
 
 
-
 String charAt(const String str, int index) {
-    char* p=(char*)malloc(2);
-    p[0]=str[index];
-    p[1]='\0';
+    char *p = (char *) malloc(2);
+    p[0] = str[index];
+    p[1] = '\0';
     return p;
 }
 
 
 boolean equal(const String s1, const String s2) {
-    int l1=length(s1);
-    int l2=length(s2);
-    if(l1!=l2){
+    int l1 = length(s1);
+    int l2 = length(s2);
+    if (l1 != l2) {
         return false;
     }
 
-    for(int i=0;i<l1;i++){
-        if(s1[i]!=s2[i]){
+    for (int i = 0; i < l1; i++) {
+        if (s1[i] != s2[i]) {
             return false;
         }
     }
@@ -63,13 +62,12 @@ boolean equal(const String s1, const String s2) {
     return true;
 
 }
-
 
 
 boolean startWith(const String s1, const String s2) {
-    int len=length(s2);
-    for(int i=0;i<len;i++){
-        if(s1[i]!=s2[i]){
+    int len = length(s2);
+    for (int i = 0; i < len; i++) {
+        if (s1[i] != s2[i]) {
             return false;
         }
     }
@@ -77,10 +75,9 @@ boolean startWith(const String s1, const String s2) {
 }
 
 
-
 int indexOf(const String src, const char ch) {
-    for(int i=0;i<length(src);i++){
-        if(ch==src[i]){
+    for (int i = 0; i < length(src); i++) {
+        if (ch == src[i]) {
             return i;
         }
     }
@@ -88,42 +85,38 @@ int indexOf(const String src, const char ch) {
 }
 
 
-
 String subString(String src, int start, int end) {
-    int len=end-start;
-    char* p=(char*)malloc((size_t) (len + 1));
-    for(int i=0;i<len;i++){
-        p[i]=src[start+i];
+    int len = end - start;
+    char *p = (char *) malloc((size_t) (len + 1));
+    for (int i = 0; i < len; i++) {
+        p[i] = src[start + i];
     }
-    p[len]='\0';
+    p[len] = '\0';
     return p;
 }
-
 
 
 String concat(String s1, String s2) {
-    int len1=length(s1);
-    int len2=length(s2);
-    char* p=(char*)malloc((size_t) (len1 + len2 + 1));
-    for(int i=0;i<len1;i++){
-        p[i]=s1[i];
+    int len1 = length(s1);
+    int len2 = length(s2);
+    char *p = (char *) malloc((size_t) (len1 + len2 + 1));
+    for (int i = 0; i < len1; i++) {
+        p[i] = s1[i];
     }
-    for(int i=0;i<len2;i++){
-        p[len1+i]=s2[i];
+    for (int i = 0; i < len2; i++) {
+        p[len1 + i] = s2[i];
     }
 
-    p[len1+len2]='\0';
+    p[len1 + len2] = '\0';
     return p;
 }
 
 
-
-
 String toUpperCase(String s1) {
-    int len=length(s1);
-    for(int i=0;i<len;i++){
-        if(s1[i]>96&&s1[i]<123){
-            s1[i]-=32;
+    int len = length(s1);
+    for (int i = 0; i < len; i++) {
+        if (s1[i] > 96 && s1[i] < 123) {
+            s1[i] -= 32;
         }
     }
 
@@ -131,12 +124,11 @@ String toUpperCase(String s1) {
 }
 
 
-
 String toDownCase(String s1) {
-    int len=length(s1);
-    for(int i=0;i<len;i++){
-        if(s1[i]>64&&s1[i]<91){
-            s1[i]+=32;
+    int len = length(s1);
+    for (int i = 0; i < len; i++) {
+        if (s1[i] > 64 && s1[i] < 91) {
+            s1[i] += 32;
         }
     }
 

@@ -7,7 +7,8 @@
 struct _Student {
     String name;
     int age;
-    void (*toString)(struct _Student* s);
+
+    void (*toString)(struct _Student *s);
 };
 
 typedef struct _Student *Student;
@@ -22,7 +23,7 @@ Student newStudent(String name, int age) {
     Student s = malloc((size_t) len);
     s->name = newString(name);
     s->age = age;
-    s->toString=toString;
+    s->toString = toString;
 
     return s;
 
@@ -31,12 +32,11 @@ Student newStudent(String name, int age) {
 int add(int a, int b) {
     return a + b;
 }
-
-
-
-
+//#define F(name,returnType,Type) returnType(*name)(Type)
 
 int main() {
+
+
     String str = newString("12345abc");
 //    println_s(str);
 //    println_d(length(str));
@@ -54,9 +54,9 @@ int main() {
 //    println_s(student.name);
 //    println_d(sizeof(student));
 
-   // Student s = newStudent("mike", 18);
-   // println_s(s->name);
-   // s->toString(s);
+    // Student s = newStudent("mike", 18);
+    // println_s(s->name);
+    // s->toString(s);
     //println_d(sizeof(struct _Student));
 
 //    void (*f)(Student s);
@@ -64,11 +64,17 @@ int main() {
 //    f(s);
 
 
-    Array array=newArray(4,10);
-    println_d(array->size);
-    println_d(*((int*)array->get(array, 1)));
+//    Array array = newArray(4, 10);
+//    println_d(array->size);
+//    println_d(*((int *) array->get(array, 1)));
+
 
     //println_d((int) calloc(10, 10));
+
+
+
+    void(*fun)(Student)=&toString;
+
 
     return 0;
 }
