@@ -19,9 +19,9 @@ Array newArray(int elementSize, int length) {
 
     int memorySize = elementSize * length;;
     char *p = malloc((size_t) memorySize);
-    for (int i = 0; i < memorySize; i++) {
-        *(p + i) = NULL;
-    }
+//    for (int i = 0; i < memorySize; i++) {
+//        *(p + i) = NULL;
+//    }
     arr->_p = p;
     arr->get = &get;
 

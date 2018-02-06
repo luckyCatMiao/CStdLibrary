@@ -3,19 +3,18 @@
 #include <stdlib.h>
 #include "util.h"
 #include "array.h"
+#include "list.h"
 
 struct _Student {
     String name;
     int age;
 
-    void (*toString)(struct _Student *s);
 };
+
 
 typedef struct _Student *Student;
 
-void toString(Student self) {
-    println_s(self->name);
-}
+
 
 Student newStudent(String name, int age) {
 
@@ -23,21 +22,17 @@ Student newStudent(String name, int age) {
     Student s = malloc((size_t) len);
     s->name = newString(name);
     s->age = age;
-    s->toString = toString;
+
 
     return s;
 
 }
 
-int add(int a, int b) {
-    return a + b;
-}
-//#define F(name,returnType,Type) returnType(*name)(Type)
 
 int main() {
 
 
-    String str = newString("12345abc");
+    //String str = newString("12345abc");
 //    println_s(str);
 //    println_d(length(str));
 //    println_d(isEmpty(str));
@@ -73,10 +68,17 @@ int main() {
 
 
 
-    void(*fun)(Student)=&toString;
+    //void(*fun)(Student)=&toString;
+
+    List l= create_List();
+    list_add(l,newStudent("mike",18));
+    Student s=list_get(l,0);
+    println_s(s->name);
 
 
     return 0;
 }
+
+
 
 
