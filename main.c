@@ -71,7 +71,10 @@ int main() {
     //void(*fun)(Student)=&toString;
 
     List l= create_List();
-    list_add(l,newStudent("mike",18));
+    for(int i=0;i<100;i++)
+    {
+        list_add(l,newStudent("mike",18));
+    }
     Student s=list_get(l,0);
     println_s(s->name);
 
