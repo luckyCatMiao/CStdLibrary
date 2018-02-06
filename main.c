@@ -2,7 +2,6 @@
 #include "mstring.h"
 #include <stdlib.h>
 #include "util.h"
-#include "array.h"
 #include "list.h"
 
 struct _Student {
@@ -13,7 +12,6 @@ struct _Student {
 
 
 typedef struct _Student *Student;
-
 
 
 Student newStudent(String name, int age) {
@@ -28,6 +26,11 @@ Student newStudent(String name, int age) {
 
 }
 
+
+void printStu(void* p){
+    Student s=p;
+    println_d(s->age);
+}
 
 int main() {
 
@@ -70,18 +73,29 @@ int main() {
 
     //void(*fun)(Student)=&toString;
 
-    List l= create_List();
-    for(int i=0;i<100;i++)
-    {
-        list_add(l,newStudent("mike",18));
+    List l = create_List();
+    for (int i = 0; i < 100; i++) {
+        list_add(l, newStudent("mike", i));
     }
-    Student s=list_get(l,0);
+    Student s = list_get(l, 0);
     println_s(s->name);
 
 
+    Student s2 = newStudent("lg", 20);
+    list_add(l, s2);
+    printlnBool(list_contains(l, s2));
+
+    Student s3 = list_get(l, 100);
+    println_d(s3->age);
+
+    list_remove(l,0);
+    Student s4 = list_get(l, 0);
+    println_d(s4->age);
+
+    list_forEach(l,printStu);
+
     return 0;
 }
-
 
 
 
