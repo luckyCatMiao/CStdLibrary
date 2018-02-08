@@ -15,7 +15,7 @@ struct _List {
 
 typedef struct _List *List;
 
-List create_List();
+List new_List();
 
 void list_add(List self, void *p);
 

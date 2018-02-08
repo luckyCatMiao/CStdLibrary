@@ -73,7 +73,7 @@ int main() {
 
     //void(*fun)(Student)=&toString;
 
-    List l = create_List();
+    List l = new_List();
     for (int i = 0; i < 100; i++) {
         list_add(l, newStudent("mike", i));
     }
@@ -83,6 +83,10 @@ int main() {
 
     Student s2 = newStudent("lg", 20);
     list_add(l, s2);
+    list_clear(l);
+    //bao cuo
+    println_d(s2->age);
+
     printlnBool(list_contains(l, s2));
 
     Student s3 = list_get(l, 100);

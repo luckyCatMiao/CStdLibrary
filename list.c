@@ -16,7 +16,7 @@ void list_grow(List self, int newSize);
 
 void list_copy(List self, void **oldArr, void **newArr, int size);
 
-List create_List() {
+List new_List() {
     List list = malloc(sizeof(struct _List));
 
     void **p = malloc(INIT_SIZE * 4);
