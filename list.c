@@ -70,8 +70,8 @@ void list_copy(List self, void **oldArr, void **newArr, int size) {
 }
 
 void list_forEach(List self, void (*action)(void *)) {
-    for(int i=0;i<self->size;i++){
-        action(list_get(self,i));
+    for (int i = 0; i < self->size; i++) {
+        action(list_get(self, i));
     }
 }
 
