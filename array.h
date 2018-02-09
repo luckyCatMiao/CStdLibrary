@@ -1,4 +1,5 @@
 struct _Array {
+    //todo refine array
     int size;
     void *_p;
     int _elementSize;
@@ -11,7 +12,7 @@ struct _Array {
 typedef struct _Array *Array;
 
 /**
- * createa new Array
+ * create a new Array
  * @param elementSize
  * @param length
  * @return
