@@ -69,6 +69,29 @@ void list_copy(List self, void **oldArr, void **newArr, int size) {
     }
 }
 
+int list_binarySearch(List self, void *value, int (*comparison)(void *, void *)) {
+    int left=0;
+    int right=self->size-1;
+    while(true){
+        int center=(left+right)/2;
+        int compareResult=comparison(list_get(self,center),value);
+         if(left>right){
+            return -1;
+        }
+        else if(compareResult==0){
+            return center;
+        }
+        else if(compareResult>0){
+             right=center-1;
+         }
+        else{
+            left=center+1;
+         }
+    }
+
+}
+
+
 void list_forEach(List self, void (*action)(void *)) {
     for (int i = 0; i < self->size; i++) {
         action(list_get(self, i));
@@ -112,6 +135,7 @@ void *list_get(List self, int index) {
     list_checkIndex(self, index);
     return self->_arr[index];
 }
+
 
 
 

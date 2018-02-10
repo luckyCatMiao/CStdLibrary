@@ -7,6 +7,10 @@
 
 #include "boolean.h"
 
+/**
+ * be careful,the list support the base type(such as int),and pointer(such as int*)
+ * you need to remember what type you have saved in it,and cast it to correct type
+ */
 struct _List {
     void **_arr;
     int size;
@@ -37,5 +41,13 @@ void list_clear(List self);
 
 void list_forEach(List self, void(*action)(void *));
 
+/**
+ * be careful! if you have saved the object type rather than base type,than the returned type was a pointer!do not compare then directly!
+ * @param self
+ * @param value
+ * @param comparison
+ * @return
+ */
+int list_binarySearch(List self, void *value, int (*comparison)(void *, void *));
 
 #endif

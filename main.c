@@ -2,6 +2,7 @@
 #include "mstring.h"
 #include <stdlib.h>
 #include "util.h"
+#include "list.h"
 
 
 #include "precondition.h"
@@ -12,6 +13,10 @@ struct _Student {
 
 };
 
+
+void test();
+
+void test2();
 
 typedef struct _Student *Student;
 
@@ -37,6 +42,32 @@ void printStu(void *p) {
 int main() {
 
 
+    //test();
+    test2();
+
+
+    return 0;
+}
+int com(void * a, void * b){
+    int v1= (int) a;
+    int v2= (int) b;
+    return v1-v2;
+}
+void test2() {
+
+    List list=new_List();
+    for(int i=0;i<5;i++){
+        list_add(list, (void *) i);
+    }
+
+    int index=list_binarySearch(list, (void *) 3, com);
+   println_d(index);
+
+}
+
+
+
+void test() {
     //String str = newString("12345abc");
 //    println_s(str);
 //    println_d(length(str));
@@ -102,10 +133,8 @@ int main() {
 
 
 
-    checkArgument(2 == 3, "error msg");
+    //checkArgument(2 == 3, "error msg");
 
-
-    return 0;
 }
 
 
