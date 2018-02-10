@@ -3,28 +3,28 @@
 //
 
 #include <stdlib.h>
-#include "LinkedList.h"
+#include "FirstLastLinkedList.h"
 
-Node new_Node(void *value);
+FLNode new_FLNode(void *value);
 
 
-Node new_Node(void *value) {
-    Node node = malloc(sizeof(struct _Node));
+FLNode new_FLNode(void *value) {
+    FLNode node = malloc(sizeof(struct _FLNode));
     node->value = value;
     node->next = NULL;
     return node;
 }
 
-void linkedlist_forEach(LinkedList self, void (*action)(void *)) {
-    Node current=self->_first;
+void FLLinkedList_forEach(FLLinkedList self, void (*action)(void *)) {
+    FLNode current=self->_first;
     while(current!=NULL){
         action(current->value);
         current=current->next;
     }
 }
 
-boolean linkedlist_contains(LinkedList self, void *p) {
-    Node current = self->_first;
+boolean FLLinkedList_contains(FLLinkedList self, void *p) {
+    FLNode current = self->_first;
     while (current != NULL) {
         if (current->value == p) {
             return true;
@@ -34,15 +34,15 @@ boolean linkedlist_contains(LinkedList self, void *p) {
     return false;
 }
 
-boolean linkedlist_isEmpty(LinkedList self) {
+boolean FLLinkedList_isEmpty(FLLinkedList self) {
     return self->_first == NULL;
 }
 
 
-void linkedlist_remove(LinkedList self, void *p) {
+void FLLinkedList_remove(FLLinkedList self, void *p) {
 
-    Node current = self->_first;
-    Node last =NULL;
+    FLNode current = self->_first;
+    FLNode last =NULL;
     while (current != NULL) {
         if (current->value == p) {
             if (last != NULL) {
@@ -64,18 +64,18 @@ void linkedlist_remove(LinkedList self, void *p) {
 
 
 
-void linkedlist_add(LinkedList self, void *p) {
+void FLLinkedList_add(FLLinkedList self, void *p) {
     self->size++;
-    Node new = new_Node(p);
+    FLNode new = new_FLNode(p);
     //whether existed or not,this code can work correctly
-    Node old = self->_first;
+    FLNode old = self->_first;
     self->_first = new;
     new->next = old;
 }
 
 
-LinkedList new_LinkedList() {
-    LinkedList list = malloc(sizeof(struct _LinkedList));
+FLLinkedList new_FLLinkedList() {
+    FLLinkedList list = malloc(sizeof(struct _FLLinkedList));
     list->size = 0;
     list->_first = NULL;
     return list;

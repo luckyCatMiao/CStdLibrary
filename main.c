@@ -52,12 +52,16 @@ int main() {
 
     return 0;
 }
-
+void f2(void * value){
+    println_d((int) value);
+}
 void linkedlistTest() {
     LinkedList list=new_LinkedList();
     for(int i=0;i<5;i++){
         linkedlist_add(list, (void *) i);
     }
+
+    linkedlist_forEach(list, f2);
     println_d(list->size);
     for(int i=0;i<5;i++){
         linkedlist_remove(list, (void *) i);

@@ -27,4 +27,7 @@ void linkedlist_remove(LinkedList self, void *p);
 boolean linkedlist_isEmpty(LinkedList self);
 
 boolean linkedlist_contains(LinkedList self,void* p);
+
+void linkedlist_forEach(LinkedList self, void(*action)(void *));
+
 #endif //LINKEDLIST_H
