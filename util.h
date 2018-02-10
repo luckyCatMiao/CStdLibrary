@@ -4,6 +4,7 @@
 #define private
 #define public
 #define Object void*
+#define readOnly
 
 void println_d(int i);
 

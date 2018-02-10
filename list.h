@@ -6,15 +6,16 @@
 #define LIST
 
 #include "boolean.h"
+#include "util.h"
 
 /**
  * be careful,the list support the base type(such as int),and pointer(such as int*)
  * you need to remember what type you have saved in it,and cast it to correct type
  */
 struct _List {
-    void **_arr;
-    int size;
-    int _arrSize;
+    private void **_arr;
+    public readOnly int size;
+    private int _arrSize;
 };
 
 typedef struct _List *List;

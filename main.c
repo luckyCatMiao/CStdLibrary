@@ -4,6 +4,7 @@
 #include "util.h"
 #include "list.h"
 #include "ints.h"
+#include "LinkedList.h"
 
 #include "precondition.h"
 
@@ -17,6 +18,8 @@ struct _Student {
 void baseTest();
 
 void binarySearchTest();
+
+void linkedlistTest();
 
 typedef struct _Student *Student;
 
@@ -43,12 +46,17 @@ int main() {
 
 
     //baseTest();
-    binarySearchTest();
+    //binarySearchTest();
+    linkedlistTest();
 
-    println_s(toBinaryString(4));
 
     return 0;
 }
+
+void linkedlistTest() {
+    LinkedList list
+}
+
 int com(void * a, void * b){
     int v1= (int) a;
     int v2= (int) b;
