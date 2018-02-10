@@ -3,6 +3,7 @@
 
 #define private
 #define public
+#define Object void*
 
 void println_d(int i);
 

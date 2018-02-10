@@ -14,9 +14,9 @@ struct _Student {
 };
 
 
-void test();
+void baseTest();
 
-void test2();
+void binarySearchTest();
 
 typedef struct _Student *Student;
 
@@ -42,8 +42,8 @@ void printStu(void *p) {
 int main() {
 
 
-    //test();
-    test2();
+    //baseTest();
+    binarySearchTest();
 
 
     return 0;
@@ -53,21 +53,21 @@ int com(void * a, void * b){
     int v2= (int) b;
     return v1-v2;
 }
-void test2() {
+void binarySearchTest() {
 
     List list=new_List();
-    for(int i=0;i<5;i++){
+    for(int i=0;i<50;i++){
         list_add(list, (void *) i);
     }
 
-    int index=list_binarySearch(list, (void *) 3, com);
+    int index=list_binarySearch(list, (void *) 16, com);
    println_d(index);
 
 }
 
 
 
-void test() {
+void baseTest() {
     //String str = newString("12345abc");
 //    println_s(str);
 //    println_d(length(str));
