@@ -9,30 +9,46 @@ Node new_Node(void *value);
 
 
 Node new_Node(void *value) {
-    Node node=malloc(sizeof(struct _Node));
-    node->value=value;
-    node->next=NULL;
+    Node node = malloc(sizeof(struct _Node));
+    node->value = value;
+    node->next = NULL;
     return node;
+}
+
+void linkedlist_remove(LinkedList self, void *p) {
+    if(self->_first==NULL){
+        return;
+    }
+    Node current=self->_first;
+    Node last=NULL;
+    while(current!=NULL){
+        if(current->value==p){
+            last->next=current->next;
+            free(current);
+            return;
+        }
+        last=current;
+        current=current->next;
+    }
 }
 
 void linkedlist_add(LinkedList self, void *p) {
     self->size++;
-    Node old=self->_first;
-    Node new=new_Node(p);
-    new->next=old;
-    self->_first=new;
+    Node new = new_Node(p);
+    if (self->_first == NULL) {
+        self->_first = new;
+    } else {
+        Node old = self->_first;
+        new->next = old;
+        self->_first = new;
+    }
 }
 
-void linkedlist_remove(LinkedList self, void *p) {
-    Node first=self->_first;
-    while(first->value!=p&&firs)
-}
+
 
 LinkedList new_LinkedList() {
     LinkedList list = malloc(sizeof(struct _LinkedList));
-    list->size=0;
-    //guard node,usd for simplicity(will consume more memory when compared with a without-guard-node version)
-    list->_first=new_Node(0);
+    list->size = 0;
 
     return list;
 }
