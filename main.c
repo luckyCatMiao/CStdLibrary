@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "util.h"
 #include "list.h"
-
+#include "ints.h"
 
 #include "precondition.h"
 
@@ -45,6 +45,7 @@ int main() {
     //baseTest();
     binarySearchTest();
 
+    println_s(toBinaryString(4));
 
     return 0;
 }
@@ -61,7 +62,7 @@ void binarySearchTest() {
     }
 
     int index=list_binarySearch(list, (void *) 16, com);
-   println_d(index);
+     println_d(index);
 
 }
 

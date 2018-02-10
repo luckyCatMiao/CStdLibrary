@@ -73,8 +73,9 @@ void list_copy(List self, void **oldArr, void **newArr, int size) {
 int list_binarySearch(List self, Object value, int (*comparison)(Object, Object)) {
     int left=0;
     int right=self->size-1;
+    int center;
     while(true){
-        int center=(left+right)/2;
+        center=(left+right)/2;
         int compareResult=comparison(list_get(self,center),value);
         if (left <= right) {
             if (compareResult == 0) {

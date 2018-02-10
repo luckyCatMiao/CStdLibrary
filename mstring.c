@@ -1,6 +1,6 @@
 #include "mstring.h"
 #include <stdlib.h>
-
+#include "util.h"
 
 /**
  * create new String
