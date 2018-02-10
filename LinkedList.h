@@ -6,6 +6,7 @@
 #define LINKEDLIST_H
 
 #include "util.h"
+#include "boolean.h"
 typedef struct _Node *Node;
 struct _Node {
     void *value;
@@ -23,4 +24,7 @@ void linkedlist_add(LinkedList self, void *p);
 
 void linkedlist_remove(LinkedList self, void *p);
 
+boolean linkedlist_isEmpty(LinkedList self);
+
+boolean linkedlist_contains(LinkedList self,void* p);
 #endif //LINKEDLIST_H

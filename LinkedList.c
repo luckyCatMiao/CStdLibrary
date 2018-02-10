@@ -15,41 +15,60 @@ Node new_Node(void *value) {
     return node;
 }
 
-void linkedlist_remove(LinkedList self, void *p) {
-    if(self->_first==NULL){
-        return;
+boolean linkedlist_contains(LinkedList self, void *p) {
+    Node current = self->_first;
+    while (current != NULL) {
+        if (current->value == p) {
+            return true;
+        }
+        current = current->next;
     }
-    Node current=self->_first;
-    Node last=NULL;
-    while(current!=NULL){
-        if(current->value==p){
-            last->next=current->next;
+    return false;
+}
+
+boolean linkedlist_isEmpty(LinkedList self) {
+    return self->_first == NULL;
+}
+
+
+void linkedlist_remove(LinkedList self, void *p) {
+
+
+    Node current = self->_first;
+    Node last = self->_first;
+    while (current != NULL) {
+        if (current->value == p) {
+            if (last != NULL) {
+                //index>=1
+                last->next = current->next;
+            } else {
+                //without last,index is 0
+                self->_first = NULL;
+            }
+            self->size--;
             free(current);
             return;
         }
-        last=current;
-        current=current->next;
+        last = current;
+        current = current->next;
     }
+
 }
 
 void linkedlist_add(LinkedList self, void *p) {
     self->size++;
     Node new = new_Node(p);
-    if (self->_first == NULL) {
-        self->_first = new;
-    } else {
-        Node old = self->_first;
-        new->next = old;
-        self->_first = new;
-    }
+    //whether existed or not,this code can work correctly
+    Node old = self->_first;
+    self->_first = new;
+    new->next = old;
 }
-
 
 
 LinkedList new_LinkedList() {
     LinkedList list = malloc(sizeof(struct _LinkedList));
     list->size = 0;
-
+    list->_first = NULL;
     return list;
 }
 

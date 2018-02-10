@@ -54,7 +54,16 @@ int main() {
 }
 
 void linkedlistTest() {
-    LinkedList list
+    LinkedList list=new_LinkedList();
+    for(int i=0;i<5;i++){
+        linkedlist_add(list, (void *) i);
+    }
+    println_d(list->size);
+    for(int i=0;i<5;i++){
+        linkedlist_remove(list, (void *) i);
+    }
+    println_d(list->size);
+
 }
 
 int com(void * a, void * b){
