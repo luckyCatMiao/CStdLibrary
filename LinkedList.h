@@ -7,6 +7,7 @@
 
 #include "util.h"
 #include "boolean.h"
+
 typedef struct _Node *Node;
 struct _Node {
     void *value;
@@ -26,7 +27,7 @@ void linkedlist_remove(LinkedList self, void *p);
 
 boolean linkedlist_isEmpty(LinkedList self);
 
-boolean linkedlist_contains(LinkedList self,void* p);
+boolean linkedlist_contains(LinkedList self, void *p);
 
 void linkedlist_forEach(LinkedList self, void(*action)(void *));
 

@@ -14,7 +14,7 @@ void __check(String msg, int lineNumber, String fileName) {
 }
 
 void __checkIndex(int index, int min, int max, int lineNumber, String fileName) {
-    if (!(min<=index&&index<=max)) {
+    if (!(min <= index && index <= max)) {
         __check("index out of range", lineNumber, fileName);
     }
 }

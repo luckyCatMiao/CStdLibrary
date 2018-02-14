@@ -6,8 +6,6 @@
 #include "ints.h"
 #include "LinkedList.h"
 
-#include "precondition.h"
-
 struct _Student {
     String name;
     int age;
@@ -52,41 +50,43 @@ int main() {
 
     return 0;
 }
-void f2(void * value){
+
+void f2(void *value) {
     println_d((int) value);
 }
+
 void linkedlistTest() {
-    LinkedList list=new_LinkedList();
-    for(int i=0;i<5;i++){
+    LinkedList list = new_LinkedList();
+    for (int i = 0; i < 5; i++) {
         linkedlist_add(list, (void *) i);
     }
 
     linkedlist_forEach(list, f2);
     println_d(list->size);
-    for(int i=0;i<5;i++){
+    for (int i = 0; i < 5; i++) {
         linkedlist_remove(list, (void *) i);
     }
     println_d(list->size);
 
 }
 
-int com(void * a, void * b){
-    int v1= (int) a;
-    int v2= (int) b;
-    return v1-v2;
+int com(void *a, void *b) {
+    int v1 = (int) a;
+    int v2 = (int) b;
+    return v1 - v2;
 }
+
 void binarySearchTest() {
 
-    List list=new_List();
-    for(int i=0;i<50;i++){
+    List list = new_List();
+    for (int i = 0; i < 50; i++) {
         list_add(list, (void *) i);
     }
 
-    int index=list_binarySearch(list, (void *) 16, com);
-     println_d(index);
+    int index = list_binarySearch(list, (void *) 16, com);
+    println_d(index);
 
 }
-
 
 
 void baseTest() {

@@ -16,10 +16,10 @@ Node new_Node(void *value) {
 }
 
 void linkedlist_forEach(LinkedList self, void (*action)(void *)) {
-    Node current=self->_first;
-    while(current!=NULL){
+    Node current = self->_first;
+    while (current != NULL) {
         action(current->value);
-        current=current->next;
+        current = current->next;
     }
 }
 
@@ -42,7 +42,7 @@ boolean linkedlist_isEmpty(LinkedList self) {
 void linkedlist_remove(LinkedList self, void *p) {
 
     Node current = self->_first;
-    Node last =NULL;
+    Node last = NULL;
     while (current != NULL) {
         if (current->value == p) {
             if (last != NULL) {
@@ -61,7 +61,6 @@ void linkedlist_remove(LinkedList self, void *p) {
     }
 
 }
-
 
 
 void linkedlist_add(LinkedList self, void *p) {
