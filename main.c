@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #include "util.h"
 #include "list.h"
-#include "ints.h"
 #include "LinkedList.h"
+#include "math.h"
 
 struct _Student {
     String name;
@@ -39,14 +39,25 @@ void printStu(void *p) {
     Student s = p;
     println_d(s->age);
 }
+struct qq{
+    int b;
+    int a[];
+};
 
 int main() {
 
 
     //baseTest();
     //binarySearchTest();
-    linkedlistTest();
+    //linkedlistTest();
 
+    //printlnBool(isPrime(289));
+//    int a[100];
+//    int result;
+//    primesBelow(100,a,&result);
+//    for(int i=0;i<result;i++){
+//        println_d(a[i]);
+//    }
 
     return 0;
 }
